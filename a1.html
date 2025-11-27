@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Document</title>
+    </head>
+    <body>
+        <p id="student"></p>
+        <script>
+            class student{
+                constructor(name,age){
+                    this.name=name;
+                    this.age=age;
+                }
+                display()
+                {
+                    return this.name + "is" + this.age + "years old"
+
+                }
+            }
+            student1=new student("Raavee",14);
+            document.getElementById("student").innerHTML=student1.display()
+        </script>
+    </body>
+</html>
