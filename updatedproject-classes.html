@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document</title>
+</head>
+<body>
+    <p id="name"></p>
+<script>
+    class myname{
+        constructor(name){
+            this.name=name;
+        }  
+        display(){
+            return "my name is " + this.name ;
+        }  
+     }
+     class myage extends myname{
+        constructor(name , age){
+            super(name);
+            this.age=age;
+
+        }
+        give(){
+            return this.display() + "I am " + this.age + "years old";
+        }
+     }
+    class mygrade extends myage{
+        constructor(name , age ,grade){
+            super(name,age);
+            this.grade= grade;
+        }
+        show(){
+            return this.give() + "I study in grade " + this.grade;
+        }
+
+    }
+    let myinfo = new mygrade("Raavee","14","10th");
+    document.getElementById("name").innerHTML= myinfo.show();
+</script>
+</body>
+</html>
